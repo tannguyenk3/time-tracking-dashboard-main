@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    /* Primary colors */
+    --primary-blue: hsl(246, 80%, 60%);
+    --white: 	#ffffff;
+
+    /* Activity colors */
+    --work-light-red: hsl(15, 100%, 70%);
+    --play-soft-blue: hsl(195, 74%, 62%);
+    --study-light-red: hsl(348, 100%, 68%);
+    --exercise-lime-green: hsl(145, 58%, 55%);
+    --social-violet: hsl(264, 64%, 52%);
+    --self-care-soft-orange: hsl(43, 84%, 65%);
+  
+    /* Neutral colors */
+    --very-dark-blue: hsl(226, 43%, 10%);
+    --dark-blue: hsl(235, 46%, 20%);
+    --desaturated-blue: hsl(235, 45%, 61%);
+    --pale-blue: hsl(236, 100%, 87%);
+  
+    /* Body Copy */
+    --body-font-size: 18px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--very-dark-blue);
+}
+
+.container {
+    max-width: 100%;
+}
+
+.user {
+    background-color: var(--dark-blue);
+    width: 250px;
+    max-width: 100%;
+    height: 130px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.container .infomation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background-color: var(--primary-blue);
+    height: 90px;
+    border-radius: 10px;
+}
+
+.container .menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px 10px 10px 20px;
+    color: var(--desaturated-blue);
+    font-weight: 300;
+}
+
+.container .menu.active {
+    color: var(--white);
+}
+
+.menu button {
+    border: none;
+    background-color: var(--dark-blue);
+    color: var(--desaturated-blue);
+}
+
+.daily:hover, .weekly:hover, .monthly:hover {
+    color: white;
+    cursor: pointer;
+}
+
+#avt {
+    width: 50px;
+    max-width: 100%;
+    border: 2px solid white;
+    border-radius: 50%;
+    transform: translateX(40%);
+}
+
+#text {
+    transform: translateX(-30%);
+}
+
+#text p {
+    font-size: 0.7rem;
+    color: var(--pale-blue);
+}
+
+#text span {
+    color: var(--white);
+    opacity: 90%;
+    font-weight: 300;
+}
+
+.card {
+    width: 250px;
+    max-width: 100%;
+}
+
+.work, .play, .study, .exercise, .social, .self-care {
+    border-radius: 10px;
+    height: 130px;
+    max-height: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.work {
+    background-color: var(--work-light-red);
+}
+
+.play {
+    background-color: var(--play-soft-blue);
+}
+
+.study {
+    background-color: var(--study-light-red);
+}
+
+.exercise {
+    background-color: var(--exercise-lime-green);
+}
+
+.social {
+    background-color: var(--social-violet);
+}
+
+.self-care {
+    background-color: var(--self-care-soft-orange);
+}
+
+.bg-img img{
+    max-width: 100%;
+    width: 55px;
+    transform: translate(320%,-10%);
+}
+
+.bg-dark-blue {
+    background-color: var(--dark-blue);
+    transform: translateY(-30%);
+    padding: 24px;
+    border-radius: 10px;
+}
+
+.exercise .bg-dark-blue{
+    transform: translateY(-13%);
+}
+
+.social .bg-dark-blue {
+    transform: translateY(-46%);
+}
+
+.self-care .bg-dark-blue {
+    transform: translateY(-25%);
+}
+
+.bg-dark-blue:hover {
+    background-color: var(--primary-blue);
+}
+
+.titles , .time{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.titles p {
+    color: var(--white);
+    font-weight: 400;
+}
+
+.icon-ellipsis {
+    transform: translate(400%,100%);
+}
+
+.time span {
+    margin-top: 7px;
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.time p {
+    color: var(--pale-blue);
+    font-size: 0.77rem;
+    font-weight: 300;
+    transform: translateY(40%);
+    text-align: right;
+}
+
+@media (min-width:768px) {
+    .container {
+        display: grid; 
+        grid-template-columns: 1fr 1fr;
+        gap:  20px;
+    }
+
+    .user {
+
+        height: 280px; 
+    }
+
+    .container .infomation {
+        height: 163px; 
+        grid-template-columns: 1fr;
+    }
+
+    #text {
+        transform: translate(10%,-30%);
+    }
+    #text span {
+        font-size: 1.8rem;
+    }
+
+    .container .menu {
+        grid-template-columns: 1fr;
+        padding: 10px 10px 10px 20px;
+        line-height: 2rem;
+    }
+
+    .menu button {
+        text-align: left;
+        line-height: 2rem;
+    }
+
+    .card {
+        max-height: 100%;
+        height: 600px;
+    }
+
+    .social, .self-care {
+        transform: translate(-108%, -230%);
+    }
+}
+
+@media (min-width:1024px) {
+    body {
+        max-width: 80%;
+    }
+
+    .container {
+        width: 470px;
+        max-width: 100%;
+    }
+
+    .user {
+        width: 200px;
+        max-width: 100%;
+        height: 383px;
+        margin-bottom: 0px;
+    }
+
+    .container .infomation { 
+        height: 255px;
+    }
+
+    #avt {
+        width: 60px;
+    }
+
+    .card {
+        display: grid;
+        grid-template-columns: repeat(3,175px);
+        gap: 20px;
+        height: 333px;
+    }
+
+    .work, .play, .study, .exercise, .social, .self-care {
+        height: 180px;
+        margin-bottom: 0px;
+    }
+
+    .bg-img img {
+        transform: translate(203%, -10%);
+    }
+
+    .bg-dark-blue {
+        height: 200px;
+        transform: translateY(-14%);
+    }
+
+    .exercise .bg-dark-blue{
+        transform: translateY(-7%);
+    }
+    
+    .social .bg-dark-blue {
+        transform: translateY(-25%);
+    }
+    
+    .self-care .bg-dark-blue {
+        transform: translateY(-15%);
+    }
+
+    .titles p {
+        color: var(--white);
+        font-weight: 400;
+        font-size: 0.9rem;
+    }
+
+    .icon-ellipsis {
+        transform: translate(350%, 216%);
+        width: 15px;
+    }
+
+    .time {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .time span {
+        margin-top: 17px;
+        color: var(--white);
+        font-size: 2.5rem;
+        font-weight: 300;
+    }
+
+    .time p {
+        text-align: left;
+    }
+
+    .social, .self-care {
+        transform: translate(0%, 0%);
+    }
+
+}
