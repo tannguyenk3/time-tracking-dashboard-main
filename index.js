@@ -134,7 +134,6 @@ const renderCards = (clickedOption) => {
         const activityClass = name.toLowerCase().replace(' ', '-')
         const timeFrameData = activity.timeframes[clickedOption]
         const previousTimeframe = calcTimeframe(clickedOption)
-        console.log(previousTimeframe)
         const section = document.createElement('section')
         section.classList.add('all-card', activityClass)
         const stringToInject = `<div class="bg-img">
